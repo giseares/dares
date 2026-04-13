@@ -593,8 +593,17 @@
   @media (max-width: 900px) {
     nav { padding: 1.2rem 2rem; }
     .nav-links { display: none; }
-    #hero { padding: 7rem 2rem 20rem; }
-    .hero-photo { width: 60vw; right: 50%; transform: translateX(50%); bottom: 0; }
+
+    #hero { padding: 7rem 2rem 5rem; } /* antes 20rem abajo, ahora no hace falta */
+
+    .hero-photo {
+      display: none; /* 🔥 la matamos en mobile */
+    }
+
+    .hero-content {
+      max-width: 100%; /* aprovecha todo el ancho */
+    }
+
     section { padding: 4rem 2rem; }
     .sobre-grid, .exp-grid { grid-template-columns: 1fr; gap: 2.5rem; }
     .proceso-steps { flex-direction: column; gap: 2rem; }
@@ -646,6 +655,7 @@
       </div>
     </div>
   </div>
+
   <div class="hero-photo">
     <img src="kevin-matos.jpg" alt="Kevin Mathos unsplash" id="heroPhoto">
   </div>
